@@ -1,38 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Racine Cleveland</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Racine Cleveland</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0;
+      background-color: #C6E6C8;
+      color: #213622;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #3d6b45, #7fbf7f);
+      color: white;
+      padding: 50px 30px 35px 30px;
+      text-align: center;
+      border-radius: 0 0 18px 18px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.7rem;
+    }
+
+    header p {
+      margin-top: 12px;
+      font-size: 1.1rem;
+    }
+
+    nav {
+      text-align: center;
+      padding: 18px 20px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #213622;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #4f8a5b;
+    }
+
+    main {
+      padding: 35px 25px 50px 25px;
+    }
+
+    .hero-image {
+      display: block;
+      width: 100%;
+      max-width: 820px;
+      margin: 0 auto 12px auto;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 0.95rem;
+      color: #3f5f44;
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      color: #2f5a35;
+      margin-top: 0;
+    }
+
+    .intro-box {
+      background-color: #ffffff;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #3f5f44;
+      padding: 25px;
+    }
+  </style>
 </head>
 
-<body style="font-family: Arial; max-width: 900px; margin: auto; padding: 20px;">
+<body>
 
-  <h1>Racine Cleveland</h1>
-  <p>Planetary Scientist studying surface–atmosphere interactions across the solar system.</p>
-
-<img src="8X0A0128-3.jpg" alt="home page photo" style="width:100%; max-width:800px;">
-  
-  <hr>
+  <header>
+    <h1>Racine Cleveland</h1>
+    <p>Planetary scientist studying surface–atmosphere interactions across the solar system.</p>
+  </header>
 
   <nav>
-    <a href="index.html">Home</a> |
-    <a href="research.html">Research Interests</a> |
-    <a href="cv.html">Curriculum Vitae</a> |
+    <a href="index.html">Home</a>
+    <a href="research.html">Research Interests</a>
+    <a href="cv.html">Curriculum Vitae</a>
     <a href="news.html">In the News</a>
   </nav>
 
-  <hr>
+  <main>
 
-  <h2>Howdy!</h2>
-  <p>I'm Racine Cleveland, a planetary science post-doctoral research fellow at Boise State University under the advisement of Dr. Brian Jackson in the Physics Department. I just recently defended my PhD thesis in Space and Planetary Science at the University of Arkansas titled "Of Dunes and Ice: A Surface–Atmosphere Investigation of Mars CO2 Sublimation Features and Titan Aeolian Fields".
+    <img src="8X0A0128-3.jpg" alt="Racine Cleveland field photo" class="hero-image">
 
-My research focused on Mars geomorphology, where I analyzed high-resolution HiRISE imagery to study sublimation-driven surface changes in the planet’s south polar region. I also worked with radar remote sensing, comparing backscatter data from Titan’s hydrocarbon dunes and Earth’s silicate dunes.
+    <div class="intro-box">
+      <h2>Howdy!</h2>
 
-My current research involves terrestrial and Martian dust devil physics. By combining Earth based field work with planetary in-situ results, we are able to gain cross-planetary results about the same feature.
+      <p>
+        I'm Racine Cleveland, a planetary science postdoctoral research fellow at Boise State University under the advisement of Dr. Brian Jackson in the Physics Department. I recently defended my PhD in Space and Planetary Science at the University of Arkansas, where my dissertation focused on surface–atmosphere interactions on Mars and Titan.
+      </p>
 
-Beyond research, I’m actively involved in science outreach. I am funded by the IDAstro program which is an NSF funded, multi-college outreach program with Bruneau Dunes State Park in south-central Idaho. This program was created with the idea of establishing collaboration between the colleges of southern Idaho and the state park observatory, as well as promoting science education with an emphasis on Astronomy and Astrophysics. (Grant number 2424470)
+      <p>
+        My research has included Mars geomorphology, where I used high-resolution HiRISE imagery to study sublimation-driven surface change in the south polar region, as well as radar remote sensing comparisons between Titan’s hydrocarbon dunes and Earth’s silicate dunes.
+      </p>
 
-With a background in science and a passion for planetary exploration, I’m always looking for new ways to apply remote sensing and geospatial analysis to better understand our solar system!</p>
+      <p>
+        My current work focuses on terrestrial and Martian dust devil physics. By combining Earth-based field work with planetary in situ results, I aim to better understand how similar processes operate across worlds.
+      </p>
+
+      <p>
+        Beyond research, I am active in science outreach through the IDAstro program, an NSF-funded multi-college collaboration with Bruneau Dunes State Park in south-central Idaho that promotes science education with an emphasis on astronomy and astrophysics (Grant 2424470).
+      </p>
+
+      <p>
+        With a background in science and a passion for planetary exploration, I am always looking for new ways to use remote sensing and geospatial analysis to better understand our solar system.
+      </p>
+
+    </div>
+
+  </main>
+
+  <footer>
+    racinecleveland@boisestate.edu
+  </footer>
 
 </body>
 </html>
