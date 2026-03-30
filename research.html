@@ -8,49 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-.section-split.reverse {
-  flex-direction: row-reverse;
-}
-
-@media (max-width: 800px) {
-  .section-split.reverse {
-    flex-direction: column;
-  }
-}
-    
-.section-split {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 50px;
-}
-
-.section-split .text-side {
-  flex: 1.2;
-  text-align: left;
-}
-
-.section-split .media-side {
-  flex: 0.9;
-  text-align: right;
-}
-
-.section-split .media-side img,
-.section-split .media-side video {
-  width: 100%;
-  max-width: 360px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  display: block;
-  margin-left: auto;
-}
-
-.section-split .media-side .caption {
-  text-align: right;
-  margin-left: auto;
-}  
-  
     html, body {
       margin: 0;
       padding: 0;
@@ -127,40 +84,15 @@
     .section-title {
       font-size: 1.6rem;
       font-weight: bold;
-      margin-bottom: 24px;
-      text-align: left;
+      margin: 0 0 24px 0;
     }
 
-    .dust-devil-layout {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 40px;
-      margin-bottom: 50px;
-    }
-
-    .media-column {
-      flex: 0.95;
-      text-align: left;
-    }
-
-    .text-column {
-      flex: 1.2;
+    .section-title.right {
       text-align: right;
     }
 
-    .dust-video {
-      width: 100%;
-      max-width: 360px;
-      border-radius: 14px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-      display: block;
-    }
-
-    .caption {
-      font-size: 0.95rem;
-      margin-top: 10px;
-      max-width: 360px;
+    .section-title.left {
+      text-align: left;
     }
 
     .section-text {
@@ -181,6 +113,89 @@
       color: #355c38;
     }
 
+    .caption {
+      font-size: 0.95rem;
+      margin-top: 10px;
+      max-width: 360px;
+    }
+
+    .media-file {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      display: block;
+    }
+
+    .dust-devil-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .dust-devil-layout .media-column {
+      flex: 0.95;
+      text-align: left;
+    }
+
+    .dust-devil-layout .text-column {
+      flex: 1.2;
+      text-align: right;
+    }
+
+    .research-section {
+      margin-bottom: 60px;
+    }
+
+    .research-layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+    }
+
+    .research-layout .text-side {
+      flex: 1.2;
+    }
+
+    .research-layout .media-side {
+      flex: 0.9;
+    }
+
+    .mars-layout .text-side {
+      text-align: left;
+    }
+
+    .mars-layout .media-side {
+      text-align: right;
+      margin-left: auto;
+    }
+
+    .mars-layout .media-side .media-file,
+    .mars-layout .media-side .caption {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    .titan-layout {
+      flex-direction: row-reverse;
+    }
+
+    .titan-layout .media-side {
+      text-align: left;
+      margin-right: auto;
+    }
+
+    .titan-layout .media-side .media-file,
+    .titan-layout .media-side .caption {
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .titan-layout .text-side {
+      text-align: right;
+    }
+
     footer {
       text-align: center;
       font-size: 0.95rem;
@@ -188,42 +203,43 @@
     }
 
     @media (max-width: 800px) {
-.section-split {
-  flex-direction: column;
-  gap: 24px;
-}
-
-.section-split .text-side,
-.section-split .media-side {
-  width: 100%;
-  text-align: left;
-}
-
-.section-split .media-side img,
-.section-split .media-side video {
-  max-width: 100%;
-  margin-left: 0;
-}
-
-.section-split .media-side .caption {
-  text-align: left;
-  margin-left: 0;
-}
-      
-      .dust-devil-layout {
+      .dust-devil-layout,
+      .research-layout,
+      .titan-layout {
         flex-direction: column;
         gap: 24px;
       }
 
-      .media-column,
-      .text-column {
+      .dust-devil-layout .media-column,
+      .dust-devil-layout .text-column,
+      .research-layout .text-side,
+      .research-layout .media-side {
         width: 100%;
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .media-file,
+      .caption,
+      .mars-layout .media-side .media-file,
+      .mars-layout .media-side .caption,
+      .titan-layout .media-side .media-file,
+      .titan-layout .media-side .caption {
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
         text-align: left;
       }
 
-      .dust-video,
-      .caption {
-        max-width: 100%;
+      .dust-devil-layout .text-column,
+      .titan-layout .text-side {
+        text-align: left;
+      }
+
+      .section-title.right,
+      .section-title.left {
+        text-align: left;
       }
 
       header h1 {
@@ -269,12 +285,11 @@
         In planetary science, images are more than visuals; they are quantitative records of surface processes. I use orbital imagery and radar data to extract measurable information about planetary surfaces, linking morphology to the physical processes that shape it. My research focuses on how surface features reflect interactions with the planetary boundary layer, from sublimation-driven landforms on Mars to radar backscatter from Titan’s dunes and pressure signatures of dust devils. By combining remote sensing, geospatial analysis, and Earth analogs, I aim to better understand how planetary environments evolve over time.
       </p>
 
-      <h2 class="section-title">Dust Devils in Motion</h2>
+      <h2 class="section-title left">Dust Devils in Motion</h2>
 
       <div class="dust-devil-layout">
-
         <div class="media-column">
-          <video class="dust-video" controls>
+          <video class="media-file" controls>
             <source src="dustdeviletosha.mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -286,72 +301,70 @@
         <div class="text-column">
           <div class="section-text">
             <p>
-              I am currently a postdoctoral researcher in <a href="https://astrojack.com" target="_blank">Brian Jackson’s</a> research group, where I study <a href="https://iopscience.iop.org/article/10.3847/PSJ/ac4586/meta" target="_blank">dust devils</a> as atmospheric vortices and their role in surface–atmosphere interactions on Mars. This work builds on established <a href="https://www.hou.usra.edu/meetings/lpsc2025/pdf/2892.pdf" target="_blank">frameworks</a> for identifying and characterizing dust devils using their pressure structure and dynamics, with the goal of understanding how boundary layer processes drive dust lifting and surface change.
+              I am currently a postdoctoral researcher in <a href="https://astrojack.com" target="_blank">Brian Jackson</a>’s research group, where I study <a href="https://iopscience.iop.org/article/10.3847/PSJ/ac4586/meta" target="_blank">dust devils</a> as atmospheric vortices and their role in surface–atmosphere interactions on Mars. This work builds on established <a href="https://www.hou.usra.edu/meetings/lpsc2025/pdf/2892.pdf" target="_blank">frameworks</a> for identifying and characterizing dust devils using their pressure structure and dynamics, with the goal of understanding how boundary layer processes drive dust lifting and surface change.
             </p>
           </div>
         </div>
-
       </div>
 
-<h2 class="section-title" style="text-align: right;">Martian Polar Processes</h2>
+      <section class="research-section">
+        <h2 class="section-title right">Martian Polar Processes</h2>
 
-<div class="section-split">
+        <div class="research-layout mars-layout">
+          <div class="text-side">
+            <div class="section-text">
+              <p>
+                The Martian polar caps are shaped by the seasonal exchange of carbon dioxide between the surface and atmosphere. Each winter, CO2 condenses onto the poles, forming a layer of frost and ice that sublimates back into the atmosphere during summer. This cycle drives active surface–atmosphere interactions and plays a central role in Mars’ present-day climate.
+              </p>
 
-  <div class="text-side">
-    <div class="section-text">
-      <p>
-        The Martian polar caps are shaped by the seasonal exchange of carbon dioxide between the surface and atmosphere. Each winter, CO2 condenses onto the poles, forming a layer of frost and ice that sublimates back into the atmosphere during summer. This cycle drives active surface–atmosphere interactions and plays a central role in Mars’ present-day climate.
-      </p>
+              <p>
+                My research focused on the Martian South Polar Residual Cap, a unique and dynamic reservoir of CO2 ice. Here, sublimation sculpts the surface into expanding depressions known as Swiss Cheese Features. Using high-resolution orbital imagery, I quantified how these features grow over time to constrain rates of mass loss and assess whether the cap is in equilibrium with the atmosphere.
+              </p>
 
-      <p>
-        My research focused on the Martian South Polar Residual Cap, a unique and dynamic reservoir of CO2 ice. Here, sublimation sculpts the surface into expanding depressions known as Swiss Cheese Features. Using high-resolution orbital imagery, I quantified how these features grow over time to constrain rates of mass loss and assess whether the cap is in equilibrium with the atmosphere.
-      </p>
+              <p>
+                By tracking these changes across multiple spatial and temporal scales, this work provides insight into modern climate variability on Mars and the processes driving polar landscape evolution.
+              </p>
+            </div>
+          </div>
 
-      <p>
-        By tracking these changes across multiple spatial and temporal scales, this work provides insight into modern climate variability on Mars and the processes driving polar landscape evolution.
-      </p>
-    </div>
-  </div>
+          <div class="media-side">
+            <img src="iceland.jpg" alt="Iceland glacier" class="media-file">
+            <p class="caption">
+              While I can’t get to Mars, I can get to ice. Sólheimajökull Glacier, Iceland. Personal trip, July 2021.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <div class="media-side">
-    <img src="iceland.jpg" alt="Iceland glacier">
-    <p class="caption">
-      While I can’t get to Mars, I can get to ice. Sólheimajökull Glacier, Iceland. Personal trip, July 2021.
-    </p>
-  </div>
+      <section class="research-section">
+        <h2 class="section-title left">Titan Aeolian Processes</h2>
 
-</div>
-<h2 class="section-title" style="text-align: left;">Titan Aeolian Processes</h2>
+        <div class="research-layout titan-layout">
+          <div class="media-side">
+            <img src="sossou.jpg" alt="Namib dunes" class="media-file">
+            <p class="caption">
+              The next best thing to Titan’s dunes. Sossusvlei, Namibia in October 2026 during NASA-funded field work.
+            </p>
+          </div>
 
-<div class="section-split reverse">
+          <div class="text-side">
+            <div class="section-text">
+              <p>
+                Titan hosts vast equatorial dune fields composed of organic sediments, shaped by complex interactions between atmospheric circulation and surface processes. Because Titan’s surface is obscured by a thick haze, radar is the primary tool for observing these landscapes. Data from the Cassini–Huygens mission revealed extensive linear dunes that record long-term wind patterns and sediment transport across the moon’s surface.
+              </p>
 
-  <!-- IMAGE LEFT -->
-  <div class="media-side" style="text-align: left;">
-    <img src="sossou.jpg" alt="Namib dunes">
-    <p class="caption" style="text-align: left;">
-      The next best thing to Titan’s dunes. Sossusvlei, Namibia in October 2026 during NASA-funded field work.
-    </p>
-  </div>
+              <p>
+                My research used radar backscatter to investigate the physical properties of these dunes and what they reveal about Titan’s environment. By applying multiple scattering models and comparing Titan to Earth analogs like the Namib Sand Sea, I test whether observed radar signals can be explained by surface properties alone or require contributions from subsurface structure.
+              </p>
 
-  <!-- TEXT RIGHT -->
-  <div class="text-side" style="text-align: right;">
-    <div class="section-text">
-      <p>
-        Titan hosts vast equatorial dune fields composed of organic sediments, shaped by complex interactions between atmospheric circulation and surface processes. Because Titan’s surface is obscured by a thick haze, radar is the primary tool for observing these landscapes. Data from the Cassini–Huygens mission revealed extensive linear dunes that record long-term wind patterns and sediment transport across the moon’s surface.
-      </p>
+              <p>
+                This work showed that Titan’s dunes cannot be fully described using surface-only models, pointing to the importance of volumetric scattering, internal porosity, or compositional layering. These results provide insight into the structure of Titan’s dune materials and improve how we interpret radar observations of planetary surfaces.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <p>
-        My research used radar backscatter to investigate the physical properties of these dunes and what they reveal about Titan’s environment. By applying multiple scattering models and comparing Titan to Earth analogs like the Namib Sand Sea, I test whether observed radar signals can be explained by surface properties alone or require contributions from subsurface structure.
-      </p>
-
-      <p>
-        This work showed that Titan’s dunes cannot be fully described using surface-only models, pointing to the importance of volumetric scattering, internal porosity, or compositional layering. These results provide insight into the structure of Titan’s dune materials and improve how we interpret radar observations of planetary surfaces.
-      </p>
-    </div>
-  </div>
-
-</div>
-      
     </main>
 
     <footer>
