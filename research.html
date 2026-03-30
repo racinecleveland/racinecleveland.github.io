@@ -1,1 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Interests</title>
 
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #C6E6C8;
+      color: #213622;
+      line-height: 1.7;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 500;
+    }
+
+    .page-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px 40px 20px;
+    }
+
+    h1, h2, h3, nav a {
+      font-family: 'Merriweather', serif;
+    }
+
+    header {
+      background-color: #9FCFA3;
+      color: #213622;
+      text-align: center;
+      padding: 50px 20px 35px 20px;
+      border-radius: 0 0 18px 18px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.7rem;
+    }
+
+    nav {
+      text-align: center;
+      padding: 18px 20px;
+      background-color: #EAF6EB;
+      border-bottom: 1px solid #9FCFA3;
+    }
+
+    nav a {
+      margin: 0 14px;
+      text-decoration: none;
+      color: #213622;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 0 0 0;
+    }
+
+    .intro-quote {
+      text-align: center;
+      font-style: italic;
+      font-size: 1.4rem;
+      margin: 10px auto 20px auto;
+      max-width: 850px;
+    }
+
+    .intro-text {
+      text-align: center;
+      font-size: 1.08rem;
+      max-width: 900px;
+      margin: 0 auto 50px auto;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+
+    .dust-devil-layout {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .media-column {
+      flex: 0.95;
+      text-align: left;
+    }
+
+    .text-column {
+      flex: 1.2;
+      text-align: right;
+    }
+
+    .dust-video {
+      width: 100%;
+      max-width: 360px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      display: block;
+    }
+
+    .caption {
+      font-size: 0.95rem;
+      margin-top: 10px;
+      max-width: 360px;
+    }
+
+    .section-text {
+      font-size: 1.05rem;
+      background-color: #F7FCF7;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .section-text a {
+      color: #213622;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .section-text a:hover {
+      color: #355c38;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      padding: 30px 0 10px 0;
+    }
+
+    @media (max-width: 800px) {
+      .dust-devil-layout {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .media-column,
+      .text-column {
+        width: 100%;
+        text-align: left;
+      }
+
+      .dust-video,
+      .caption {
+        max-width: 100%;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
+
+      .intro-quote {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="page-wrapper">
+      <h1>Research Interests</h1>
+    </div>
+  </header>
+
+  <nav>
+    <div class="page-wrapper">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research Interests</a>
+      <a href="cv.html">Curriculum Vitae</a>
+      <a href="news.html">In the News</a>
+    </div>
+  </nav>
+
+  <div class="page-wrapper">
+    <main>
+
+      <p class="intro-quote">
+        They say a picture is worth a thousand words—but how much data is it worth?
+      </p>
+
+      <p class="intro-text">
+        In planetary science, images are more than visuals; they are quantitative records of surface processes. I use orbital imagery and radar data to extract measurable information about planetary surfaces, linking morphology to the physical processes that shape it. My research focuses on how surface features reflect interactions with the planetary boundary layer, from sublimation-driven landforms on Mars to radar backscatter from Titan’s dunes and pressure signatures of dust devils. By combining remote sensing, geospatial analysis, and Earth analogs, I aim to better understand how planetary environments evolve over time.
+      </p>
+
+      <h2 class="section-title">Dust Devils in Motion</h2>
+
+      <div class="dust-devil-layout">
+
+        <div class="media-column">
+          <video class="dust-video" controls>
+            <source src="dustdeviletosha.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="caption">
+            Caught an unexpected dust devil in Etosha National Park, Namibia. Personal excursion, October 2025.
+          </p>
+        </div>
+
+        <div class="text-column">
+          <div class="section-text">
+            <p>
+              I am currently a postdoctoral researcher in <a href="https://astrojack.com" target="_blank">Brian Jackson’s</a> research group, where I study <a href="https://iopscience.iop.org/article/10.3847/PSJ/ac4586/meta" target="_blank">dust devils</a> as atmospheric vortices and their role in surface–atmosphere interactions on Mars. This work builds on established <a href="https://www.hou.usra.edu/meetings/lpsc2025/pdf/2892.pdf" target="_blank">frameworks</a> for identifying and characterizing dust devils using their pressure structure and dynamics, with the goal of understanding how boundary layer processes drive dust lifting and surface change.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <footer>
+      racinecleveland@boisestate.edu
+    </footer>
+  </div>
+
+</body>
+</html>
