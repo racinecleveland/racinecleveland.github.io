@@ -8,6 +8,49 @@
   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
+.section-split.reverse {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 800px) {
+  .section-split.reverse {
+    flex-direction: column;
+  }
+}
+    
+.section-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.section-split .text-side {
+  flex: 1.2;
+  text-align: left;
+}
+
+.section-split .media-side {
+  flex: 0.9;
+  text-align: right;
+}
+
+.section-split .media-side img,
+.section-split .media-side video {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  display: block;
+  margin-left: auto;
+}
+
+.section-split .media-side .caption {
+  text-align: right;
+  margin-left: auto;
+}  
+  
     html, body {
       margin: 0;
       padding: 0;
@@ -145,6 +188,28 @@
     }
 
     @media (max-width: 800px) {
+.section-split {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-split .text-side,
+.section-split .media-side {
+  width: 100%;
+  text-align: left;
+}
+
+.section-split .media-side img,
+.section-split .media-side video {
+  max-width: 100%;
+  margin-left: 0;
+}
+
+.section-split .media-side .caption {
+  text-align: left;
+  margin-left: 0;
+}
+      
       .dust-devil-layout {
         flex-direction: column;
         gap: 24px;
@@ -230,10 +295,9 @@
 
 <h2 class="section-title" style="text-align: right;">Martian Polar Processes</h2>
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: 50px;">
+<div class="section-split">
 
-  <!-- TEXT LEFT -->
-  <div style="flex: 1.2; text-align: left;">
+  <div class="text-side">
     <div class="section-text">
       <p>
         The Martian polar caps are shaped by the seasonal exchange of carbon dioxide between the surface and atmosphere. Each winter, CO2 condenses onto the poles, forming a layer of frost and ice that sublimates back into the atmosphere during summer. This cycle drives active surface–atmosphere interactions and plays a central role in Mars’ present-day climate.
@@ -249,10 +313,9 @@
     </div>
   </div>
 
-  <!-- IMAGE RIGHT -->
-  <div style="flex: 0.9; text-align: right;">
-    <img src="iceland.jpg" class="dust-video" alt="Iceland glacier">
-    <p class="caption" style="text-align: right;">
+  <div class="media-side">
+    <img src="iceland.jpg" alt="Iceland glacier">
+    <p class="caption">
       While I can’t get to Mars, I can get to ice. Sólheimajökull Glacier, Iceland. Personal trip, July 2021.
     </p>
   </div>
@@ -260,10 +323,18 @@
 </div>
 <h2 class="section-title" style="text-align: left;">Titan Aeolian Processes</h2>
 
-<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; margin-bottom: 50px;">
+<div class="section-split reverse">
+
+  <!-- IMAGE LEFT -->
+  <div class="media-side" style="text-align: left;">
+    <img src="sossou.jpg" alt="Namib dunes">
+    <p class="caption" style="text-align: left;">
+      The next best thing to Titan’s dunes. Sossusvlei, Namibia in October 2026 during NASA-funded field work.
+    </p>
+  </div>
 
   <!-- TEXT RIGHT -->
-  <div style="flex: 1.2; text-align: right;">
+  <div class="text-side" style="text-align: right;">
     <div class="section-text">
       <p>
         Titan hosts vast equatorial dune fields composed of organic sediments, shaped by complex interactions between atmospheric circulation and surface processes. Because Titan’s surface is obscured by a thick haze, radar is the primary tool for observing these landscapes. Data from the Cassini–Huygens mission revealed extensive linear dunes that record long-term wind patterns and sediment transport across the moon’s surface.
@@ -277,14 +348,6 @@
         This work showed that Titan’s dunes cannot be fully described using surface-only models, pointing to the importance of volumetric scattering, internal porosity, or compositional layering. These results provide insight into the structure of Titan’s dune materials and improve how we interpret radar observations of planetary surfaces.
       </p>
     </div>
-  </div>
-
-  <!-- IMAGE left -->
-  <div style="flex: 0.9; text-align: left;">
-    <img src="sossou.jpg" class="dust-video" alt="Namib dunes">
-    <p class="caption" style="text-align: left;">
-      The next best thing to Titan’s dunes. Sossusvlei, Namibia in October 2026 during NASA-funded field work.
-    </p>
   </div>
 
 </div>
