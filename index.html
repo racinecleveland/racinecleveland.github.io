@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Racine Cleveland</title>
+  <title>Racine D. Cleveland, PhD</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
   
@@ -19,7 +19,7 @@
     }
 
     .page-wrapper {
-      max-width: 950px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 0 20px 40px 20px;
     }
@@ -67,23 +67,42 @@ h1, h2 {
       text-decoration: underline;
     }
 
+   
     main {
-      padding: 35px 0 0 0;
+      padding: 40px 0 0 0;
+    }
+
+    .home-layout {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 40px;
+      margin-top: 10px;
+    }
+
+    .text-column {
+      flex: 1.4;
+      min-width: 0;
+    }
+
+    .image-column {
+      flex: 0.9;
+      text-align: center;
     }
 
     .hero-image {
-      display: block;
-      width: 60%;
-      max-width: 400px;
-      margin: 0 auto 20px auto;
+      width: 100%;
+      max-width: 340px;
+      height: auto;
       border-radius: 16px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      display: block;
+      margin: 0 auto;
     }
 
     .caption {
-      text-align: center;
       font-size: 0.95rem;
-      margin-bottom: 35px;
+      margin-top: 12px;
     }
 
     .intro-box {
@@ -96,12 +115,50 @@ h1, h2 {
     h2 {
       margin-top: 0;
       color: #213622;
+      font-family: 'Merriweather', serif;
+    }
+
+    p {
+      font-size: 1.05rem;
     }
 
     footer {
       text-align: center;
-      font-size: 0.9rem;
-      padding: 25px 0 10px 0;
+      font-size: 0.95rem;
+      padding: 30px 0 10px 0;
+    }
+
+    @media (max-width: 800px) {
+      .home-layout {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .text-column,
+      .image-column {
+        width: 100%;
+      }
+
+      .image-column {
+        order: 2;
+      }
+
+      .text-column {
+        order: 1;
+      }
+
+      .hero-image {
+        max-width: 280px;
+      }
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 10px;
+      }
     }
   </style>
 </head>
@@ -109,7 +166,7 @@ h1, h2 {
 
   <header>
     <div class="page-wrapper">
-      <h1>Racine Cleveland</h1>
+      <h1>Racine D. Cleveland, PhD</h1>
       <p>Planetary scientist studying surface–atmosphere interactions across the solar system.</p>
     </div>
   </header>
@@ -125,10 +182,10 @@ h1, h2 {
 
   <div class="page-wrapper">
     <main>
+      <div class="home-layout">
 
-      <img src="8X0A0128-3.jpg" alt="homepagephoto" class="hero-image">
-
-      <div class="intro-box">
+        <div class="text-column">
+          <div class="intro-box">
         <h2>Howdy!</h2>
 
         <p>
