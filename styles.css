@@ -17,6 +17,41 @@ body {
   position: relative;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  background:
+
+    /* 🌫️ GAS GIANT (striped bands) */
+    radial-gradient(circle at 20% 30%, rgba(159,207,163,0.18) 0%, transparent 40%),
+    repeating-linear-gradient(
+      0deg,
+      rgba(120,160,130,0.08),
+      rgba(120,160,130,0.08) 4px,
+      transparent 4px,
+      transparent 12px
+    ),
+
+    /* 🪨 CRATERED BODY */
+    radial-gradient(circle at 80% 25%, rgba(140,180,150,0.15) 0%, transparent 45%),
+    radial-gradient(circle at 78% 23%, rgba(0,0,0,0.06) 0%, transparent 12%),
+    radial-gradient(circle at 83% 28%, rgba(0,0,0,0.05) 0%, transparent 10%),
+
+    /* 🛰️ TOPOGRAPHY / RADAR STYLE */
+    radial-gradient(circle at 60% 75%, rgba(120,160,130,0.14) 0%, transparent 50%),
+    repeating-radial-gradient(
+      circle at 60% 75%,
+      rgba(120,160,130,0.06),
+      rgba(120,160,130,0.06) 2px,
+      transparent 2px,
+      transparent 18px
+    );
+}
+
 /* soft starry texture */
 body::before {
   content: "";
