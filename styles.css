@@ -17,6 +17,78 @@ body {
   background: linear-gradient(180deg, #eaf6eb 0%, #d8edd9 40%, #c6e6c8 100%);
 }
 
+/* header planets */
+.h-planet {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.35;
+}
+
+/* sizes */
+.h-planet.small {
+  width: 40px;
+  height: 40px;
+}
+
+.h-planet:not(.small) {
+  width: 70px;
+  height: 70px;
+}
+.h-planet.ringed {
+  overflow: visible;
+}
+
+.h-planet.ringed::after {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 28%;
+  left: -20%;
+  top: 36%;
+  border: 2px solid rgba(90, 130, 95, 0.35);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+.h-planet.moon {
+  overflow: visible;
+}
+
+.h-planet.moon::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  border: 1px dashed rgba(120,150,125,0.2);
+  border-radius: 50%;
+  top: -20%;
+  left: -20%;
+}
+
+.h-planet.moon::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #dfeee2, #8fae95);
+  top: -6px;
+  left: 70%;
+}
+.h-planet:nth-child(1) {
+  left: 10%;
+  top: 25%;
+}
+
+.h-planet:nth-child(2) {
+  right: 12%;
+  top: 30%;
+}
+
+.h-planet:nth-child(3) {
+  right: 30%;
+  bottom: 12%;
+}
+
 /* tiny stars */
 body::before {
   content: "";
