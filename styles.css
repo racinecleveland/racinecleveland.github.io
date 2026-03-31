@@ -38,63 +38,56 @@ footer,
   z-index: 1;
 }
 
-/* decorative planets container */
-.bg-planets {
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0b1020;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* background container */
+.planet-bg {
   position: fixed;
   inset: 0;
+  z-index: -1;
+  overflow: hidden;
   pointer-events: none;
-  z-index: 0;
 }
 
 /* base planet */
 .planet {
   position: absolute;
   border-radius: 50%;
-  overflow: hidden;
-  opacity: 0.9;
-  box-shadow:
-    inset -10px -10px 18px rgba(0,0,0,0.10),
-    inset 8px 8px 14px rgba(255,255,255,0.10);
+  opacity: 0.28;
 }
 
+/* sizes */
+.small { width: 40px; height: 40px; }
+.medium { width: 80px; height: 80px; }
+.large { width: 140px; height: 140px; }
+
 /* gas planets */
-.planet.gas {
+.gas {
   background:
     repeating-linear-gradient(
       180deg,
-      rgba(50, 83, 54, 0.28) 0 6px,
-      rgba(126, 173, 132, 0.38) 6px 14px,
-      rgba(76, 122, 82, 0.24) 14px 20px
-    );
+      rgba(255,255,255,0.10) 0px,
+      rgba(255,255,255,0.10) 6px,
+      rgba(255,255,255,0.02) 6px,
+      rgba(255,255,255,0.02) 14px
+    ),
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.18), rgba(255,255,255,0.04) 60%, rgba(0,0,0,0.12) 100%);
 }
 
 /* crater planets */
-.planet.crater {
+.crater {
   background:
-    radial-gradient(circle at 30% 35%, rgba(33,54,34,0.35) 0 7%, transparent 7.5%),
-    radial-gradient(circle at 68% 58%, rgba(33,54,34,0.28) 0 6%, transparent 6.5%),
-    radial-gradient(circle at 55% 22%, rgba(33,54,34,0.22) 0 4%, transparent 4.5%),
-    radial-gradient(circle at 42% 72%, rgba(33,54,34,0.22) 0 5%, transparent 5.5%),
-    linear-gradient(135deg, rgba(91,141,98,0.55), rgba(132,182,139,0.42));
-}
-
-/* topo planets */
-.planet.topo {
-  background:
-    repeating-radial-gradient(
-      circle at center,
-      rgba(50, 83, 54, 0.22) 0 2px,
-      transparent 2px 10px
-    ),
-    linear-gradient(135deg, rgba(103,154,110,0.36), rgba(151,201,157,0.30));
-}
-
-/* positions + sizes */
-.p1 {
-  width: 150px;
-  height: 150px;
-  left: 9%;
-  top: 16%;
+    radial-gradient(circle at 25% 30%, rgba(255,255,255,0.08) 0 8%, transparent 9%),
+    radial-gradient(circle at 65% 40%, rgba(255,255,255,0.08) 0 10%, transparent 11%),
+    radial-gradient(circle at 45% 70%, rgba(255,255,255,0.08) 0 7%, transparent 8%),
+    radial-gradient(circle at 70% 75%, rgba(255,255,255,0.06) 0 6%, transparent 7%),
+    radial-gradient(circle at 30% 30%, rgba(255,255,255,0.16), rgba(255,255,255,0.04) 60%, rgba(0,0,0,0.14) 100%);
 }
 
 .p2 {
