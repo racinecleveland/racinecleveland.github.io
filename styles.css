@@ -49,6 +49,7 @@ footer,
 
 /* base planet */
 .planet {
+  transform: translate(-50%, -50%)
   position: absolute;
   border-radius: 50%;
   opacity: 0.5;
@@ -98,63 +99,63 @@ footer,
 .p1 {
   width: 120px;
   height: 120px;
-  left: 8%;
-  top: 12%;
+  left: 4%;
+  top: 8%;
 }
 
 .p2 {
   width: 95px;
   height: 95px;
-  left: 33%;
-  top: 16%;
+  left: 25%;
+  top: 10%;
 }
 
 .p3 {
   width: 110px;
   height: 110px;
-  right: 12%;
-  top: 14%;
+  left: 96%;
+  top: 12%;
 }
 
 .p4 {
   width: 85px;
   height: 85px;
-  left: 62%;
+  left: 92%;
   top: 40%;
 }
 
 .p5 {
   width: 100px;
   height: 100px;
-  left: 14%;
+  left: 6%;
   top: 50%;
 }
 
 .p6 {
   width: 140px;
   height: 140px;
-  right: 10%;
-  bottom: 12%;
+  left: 95%;
+  top: 88%;
 }
 
 .p7 {
   width: 90px;
   height: 90px;
-  left: 38%;
-  bottom: 16%;
+  left: 30%;
+  top: 90%;
 }
 
 .p8 {
   width: 115px;
   height: 115px;
-  left: 58%;
-  top: 68%;
+  left: 70%;
+  top: 75%;
 }
 
 .p10 {
   width: 80px;
   height: 80px;
-  right: 24%;
+  left: 85%;
   top: 60%;
 }
 
