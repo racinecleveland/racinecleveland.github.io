@@ -98,72 +98,71 @@ footer,
 .p1 {
   width: 150px;
   height: 150px;
-  left: 6%;
-  top: 10%;
+  left: 4%;
+  top: 8%;
 }
 
 .p2 {
   width: 110px;
   height: 110px;
-  left: 39%;
-  top: 10%;
+  left: 30%;
+  top: 16%;
 }
 
 .p3 {
   width: 135px;
   height: 135px;
-  right: 9%;
-  top: 13%;
+  right: 6%;
+  top: 10%;
 }
 
 .p4 {
   width: 95px;
   height: 95px;
-  left: 7%;
-  top: 54%;
+  left: 10%;
+  top: 48%;
 }
 
 .p5 {
   width: 115px;
   height: 115px;
-  right: 15%;
-  top: 42%;
+  right: 18%;
+  top: 38%;
 }
 
 .p6 {
   width: 175px;
   height: 175px;
-  right: 7%;
-  bottom: 7%;
+  right: 5%;
+  bottom: 4%;
 }
 
-/* more planet positions */
 .p7 {
   width: 90px;
   height: 90px;
-  left: 22%;
-  top: 72%;
+  left: 20%;
+  top: 74%;
 }
 
 .p8 {
   width: 130px;
   height: 130px;
-  left: 60%;
-  top: 65%;
+  left: 56%;
+  top: 66%;
 }
 
 .p9 {
   width: 70px;
   height: 70px;
-  left: 80%;
-  top: 30%;
+  left: 78%;
+  top: 26%;
 }
 
 .p10 {
   width: 100px;
   height: 100px;
-  left: 45%;
-  top: 50%;
+  left: 46%;
+  top: 44%;
 }
 
 /* moons */
