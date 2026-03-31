@@ -16,11 +16,32 @@ body {
   overflow-x: hidden;
   background: linear-gradient(180deg, #eaf6eb 0%, #d8edd9 40%, #c6e6c8 100%);
 }
+
+/* tiny stars */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.22) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+/* keep actual content above decorative background */
+header,
+nav,
+main,
+footer,
+.page-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 /* =========================
-   PLANET DECOR
+   PAGE BACKGROUND PLANETS
    ========================= */
 
-/* fixed page background layer */
 .planet-bg {
   position: fixed;
   inset: 0;
@@ -29,22 +50,18 @@ body {
   pointer-events: none;
 }
 
-/* -------------------------
-   SHARED PLANET LOOK
-   ------------------------- */
-
-.planet,
-.h-planet {
+.planet {
   position: absolute;
   border-radius: 50%;
+  opacity: 0.42;
+  transform: translate(-50%, -50%);
   box-shadow:
     inset -12px -12px 24px rgba(0, 0, 0, 0.12),
     inset 10px 10px 18px rgba(255, 255, 255, 0.08);
 }
 
-/* gas texture */
-.planet.gas,
-.h-planet.gas {
+/* shared planet textures */
+.gas {
   background:
     repeating-linear-gradient(
       180deg,
@@ -63,9 +80,7 @@ body {
     );
 }
 
-/* crater texture */
-.planet.crater,
-.h-planet.crater {
+.crater {
   background:
     radial-gradient(circle at 28% 30%, rgba(70, 105, 74, 0.45) 0 8%, transparent 9%),
     radial-gradient(circle at 64% 38%, rgba(70, 105, 74, 0.42) 0 10%, transparent 11%),
@@ -79,44 +94,32 @@ body {
     );
 }
 
-/* -------------------------
-   RINGS
-   ------------------------- */
-
-.planet.ringed,
-.planet.ring,
-.h-planet.ringed,
-.h-planet.ring {
+/* rings */
+.ringed,
+.ring {
   overflow: visible;
 }
 
-.planet.ringed::after,
-.planet.ring::after,
-.h-planet.ringed::after,
-.h-planet.ring::after {
+.ringed::after,
+.ring::after {
   content: "";
   position: absolute;
   width: 145%;
   height: 26%;
   left: -22.5%;
   top: 37%;
-  border: 2px solid rgba(90, 130, 95, 0.30);
+  border: 2px solid rgba(90, 130, 95, 0.28);
   border-radius: 50%;
   transform: rotate(-18deg);
   pointer-events: none;
 }
 
-/* -------------------------
-   MOONS
-   ------------------------- */
-
-.planet.moon,
-.h-planet.moon {
+/* moons */
+.moon {
   overflow: visible;
 }
 
-.planet.moon::before,
-.h-planet.moon::before {
+.moon::before {
   content: "";
   position: absolute;
   width: 140%;
@@ -127,8 +130,7 @@ body {
   border-radius: 50%;
 }
 
-.planet.moon::after,
-.h-planet.moon::after {
+.moon::after {
   content: "";
   position: absolute;
   width: 16px;
@@ -140,16 +142,7 @@ body {
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.10);
 }
 
-/* -------------------------
-   BACKGROUND PLANETS
-   ------------------------- */
-
-.planet {
-  opacity: 0.5;
-  transform: translate(-50%, -50%);
-}
-
-/* positions */
+/* background planet positions */
 .p1 {
   width: 120px;
   height: 120px;
@@ -213,15 +206,22 @@ body {
   top: 60%;
 }
 
-/* -------------------------
-   HEADER PLANETS
-   ------------------------- */
+/* =========================
+   HEADER
+   ========================= */
 
 header {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(135deg, #a7d6ac 0%, #8fc99a 100%);
+  color: #213622;
+  text-align: center;
+  padding: 52px 20px 38px 20px;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 8px 24px rgba(33, 54, 34, 0.08);
 }
 
+/* header-only planets */
 .header-planets {
   position: absolute;
   inset: 0;
@@ -230,25 +230,105 @@ header {
 }
 
 .h-planet {
-  opacity: 0.32;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.24;
+  box-shadow:
+    inset -10px -10px 18px rgba(0, 0, 0, 0.10),
+    inset 8px 8px 14px rgba(255, 255, 255, 0.08);
+}
+
+.h-planet.gas {
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(80, 120, 85, 0.50) 0px,
+      rgba(80, 120, 85, 0.50) 8px,
+      rgba(120, 160, 122, 0.34) 8px,
+      rgba(120, 160, 122, 0.34) 16px
+    ),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255,255,255,0.20),
+      rgba(255,255,255,0.05) 58%,
+      rgba(0,0,0,0.12) 100%
+    );
+}
+
+.h-planet.crater {
+  background:
+    radial-gradient(circle at 28% 30%, rgba(70, 105, 74, 0.40) 0 8%, transparent 9%),
+    radial-gradient(circle at 64% 38%, rgba(70, 105, 74, 0.36) 0 10%, transparent 11%),
+    radial-gradient(circle at 42% 68%, rgba(70, 105, 74, 0.30) 0 7%, transparent 8%),
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(160, 195, 165, 0.24),
+      rgba(70, 95, 75, 0.22) 100%
+    );
+}
+
+/* header rings */
+.h-planet.ringed,
+.h-planet.ring {
+  overflow: visible;
+}
+
+.h-planet.ringed::after,
+.h-planet.ring::after {
+  content: "";
+  position: absolute;
+  width: 145%;
+  height: 26%;
+  left: -22.5%;
+  top: 37%;
+  border: 2px solid rgba(90, 130, 95, 0.24);
+  border-radius: 50%;
+  transform: rotate(-18deg);
+}
+
+/* header moon */
+.h-planet.moon {
+  overflow: visible;
+}
+
+.h-planet.moon::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  top: -20%;
+  left: -20%;
+  border: 1px dashed rgba(120, 150, 125, 0.14);
+  border-radius: 50%;
+}
+
+.h-planet.moon::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: -5px;
+  left: 72%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #dfeee2, #8fae95);
 }
 
 .h-planet.small {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
 }
 
 .h-planet.medium {
-  width: 65px;
-  height: 65px;
+  width: 62px;
+  height: 62px;
 }
 
 .h-planet.large {
-  width: 80px;
-  height: 80px;
+  width: 78px;
+  height: 78px;
 }
 
-/* header planet placement */
+/* place header planets inside the header only */
 .header-planets .h-planet:nth-child(1) {
   left: 8%;
   top: 20%;
@@ -267,55 +347,7 @@ header {
 header h1,
 header p {
   position: relative;
-  z-index: 1;
-}
-
-/* moons */
-.moon {
-  position: relative;
-}
-
-.moon::before {
-  content: "";
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  border: 1px dashed rgba(120,150,125,0.25);
-  border-radius: 50%;
-  top: -20%;
-  left: -20%;
-}
-
-.moon::after {
-  content: "";
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, #dfeee2, #8fae95);
-  top: -12px;
-  left: 70%;
-  box-shadow: 0 0 6px rgba(0,0,0,0.15);
-}
-
-/* page shell */
-.page-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px 40px 20px;
-}
-
-h1, h2, h3, nav a {
-  font-family: 'Merriweather', serif;
-}
-
-header {
-  background: linear-gradient(135deg, #a7d6ac 0%, #8fc99a 100%);
-  color: #213622;
-  text-align: center;
-  padding: 52px 20px 38px 20px;
-  border-radius: 0 0 24px 24px;
-  box-shadow: 0 8px 24px rgba(33, 54, 34, 0.08);
+  z-index: 2;
 }
 
 header h1 {
@@ -328,6 +360,20 @@ header p {
   margin-top: 12px;
   font-size: 1.15rem;
   font-weight: 400;
+}
+
+/* =========================
+   PAGE SHELL
+   ========================= */
+
+.page-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+h1, h2, h3, nav a {
+  font-family: 'Merriweather', serif;
 }
 
 nav {
@@ -729,12 +775,40 @@ footer {
     font-size: 1.25rem;
   }
 
-  .p1 { width: 110px; height: 110px; left: 8%; top: 14%; }
-  .p2 { width: 86px; height: 86px; left: 42%; top: 10%; }
-  .p3 { width: 96px; height: 96px; right: 10%; top: 16%; }
-  .p4 { width: 70px; height: 70px; left: 8%; top: 58%; }
-  .p5 { width: 84px; height: 84px; right: 12%; top: 46%; }
-  .p6 { width: 120px; height: 120px; right: 7%; bottom: 10%; }
+  .p1 { width: 100px; height: 100px; left: 8%; top: 12%; }
+  .p2 { width: 82px; height: 82px; left: 34%; top: 10%; }
+  .p3 { width: 92px; height: 92px; left: 95%; top: 14%; }
+  .p4 { width: 68px; height: 68px; left: 92%; top: 42%; }
+  .p5 { width: 84px; height: 84px; left: 10%; top: 52%; }
+  .p6 { width: 115px; height: 115px; left: 94%; top: 86%; }
+  .p7 { width: 76px; height: 76px; left: 30%; top: 92%; }
+  .p8 { width: 92px; height: 92px; left: 74%; top: 78%; }
+  .p10 { width: 66px; height: 66px; left: 84%; top: 62%; }
+
+  .header-planets .h-planet:nth-child(1) {
+    left: 6%;
+    top: 18%;
+  }
+
+  .header-planets .h-planet:nth-child(2) {
+    right: 8%;
+    top: 22%;
+  }
+
+  .header-planets .h-planet:nth-child(3) {
+    right: 24%;
+    bottom: 10%;
+  }
+
+  .h-planet.medium {
+    width: 54px;
+    height: 54px;
+  }
+
+  .h-planet.large {
+    width: 68px;
+    height: 68px;
+  }
 }
 
 @media (max-width: 700px) {
