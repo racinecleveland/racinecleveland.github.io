@@ -44,8 +44,6 @@ header p {
   font-weight: 400;
 }
 
-border-top: 1px solid #8bbd8f;
-
 nav {
   text-align: center;
   padding: 18px 20px;
@@ -54,7 +52,6 @@ nav {
 }
 
 nav a {
-  margin: 0 14px;
   text-decoration: none;
   color: #213622;
   font-weight: bold;
@@ -154,6 +151,7 @@ footer {
   padding: 25px 20px;
   margin-top: 50px;
   border-radius: 18px 18px 0 0;
+  border-top: 1px solid #8bbd8f;
 }
 
 /* Research page intro */
