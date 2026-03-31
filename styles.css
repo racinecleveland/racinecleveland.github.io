@@ -49,7 +49,7 @@ footer,
 
 /* base planet */
 .planet {
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
   position: absolute;
   border-radius: 50%;
   opacity: 0.5;
