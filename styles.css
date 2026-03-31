@@ -137,6 +137,63 @@ footer,
   bottom: 7%;
 }
 
+/* more planet positions */
+.p7 {
+  width: 90px;
+  height: 90px;
+  left: 22%;
+  top: 72%;
+}
+
+.p8 {
+  width: 130px;
+  height: 130px;
+  left: 60%;
+  top: 65%;
+}
+
+.p9 {
+  width: 70px;
+  height: 70px;
+  left: 80%;
+  top: 30%;
+}
+
+.p10 {
+  width: 100px;
+  height: 100px;
+  left: 45%;
+  top: 50%;
+}
+
+/* moons */
+.moon {
+  position: relative;
+}
+
+.moon::before {
+  content: "";
+  position: absolute;
+  width: 140%;
+  height: 140%;
+  border: 1px dashed rgba(120,150,125,0.25);
+  border-radius: 50%;
+  top: -20%;
+  left: -20%;
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #dfeee2, #8fae95);
+  top: -12px;
+  left: 70%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
 /* page shell */
 .page-wrapper {
   max-width: 1100px;
