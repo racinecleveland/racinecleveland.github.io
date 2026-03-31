@@ -4,8 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  background:
-    radial-gradient(circle at top, #e8f7ea 0%, #d6ecd7 30%, #c6e6c8 65%, #b8d9bc 100%);
+  background: linear-gradient(180deg, #eaf6eb 0%, #d8edd9 40%, #c6e6c8 100%);
   color: #213622;
   line-height: 1.7;
 }
@@ -23,64 +22,111 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(rgba(255,255,255,0.16) 1px, transparent 1px);
-  background-size: 42px 42px;
   pointer-events: none;
   z-index: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.18) 1px, transparent 1px);
+  background-size: 42px 42px;
 }
 
-/* ghost planets */
+/* soft planet dots */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.42;
+  opacity: 0.5;
   background:
-    /* gas giant stripes */
+    /* gas giant top left */
     repeating-linear-gradient(
       0deg,
       rgba(118,166,123,0.10) 0 4px,
       rgba(255,255,255,0.05) 4px 8px,
       transparent 8px 14px
-    ) 82% 18% / 260px 260px no-repeat,
-
-    /* gas giant circular fade */
-    radial-gradient(circle at 82% 18%,
-      rgba(167,214,172,0.22) 0 10%,
-      rgba(143,201,154,0.12) 10% 14%,
-      transparent 14.5%
+    ) 14% 18% / 150px 150px no-repeat,
+    radial-gradient(circle at 14% 18%,
+      rgba(167,214,172,0.24) 0 6.5%,
+      rgba(143,201,154,0.14) 6.5% 7.6%,
+      transparent 7.7%
     ),
 
-    /* cratered planet body */
-    radial-gradient(circle at 18% 70%,
-      rgba(167,214,172,0.20) 0 10%,
-      rgba(143,201,154,0.10) 10% 14%,
-      transparent 14.5%
+    /* crater planet upper middle */
+    radial-gradient(circle at 42% 12%,
+      rgba(167,214,172,0.22) 0 4.8%,
+      rgba(143,201,154,0.12) 4.8% 5.8%,
+      transparent 5.9%
     ),
+    radial-gradient(circle at 40.5% 10.8%, rgba(33,54,34,0.05) 0 0.45%, transparent 0.5%),
+    radial-gradient(circle at 43.3% 13.2%, rgba(33,54,34,0.04) 0 0.35%, transparent 0.4%),
+    radial-gradient(circle at 41.8% 12.9%, rgba(33,54,34,0.035) 0 0.28%, transparent 0.33%),
 
-    /* crater marks */
-    radial-gradient(circle at 14% 66%, rgba(33,54,34,0.05) 0 1.3%, transparent 1.4%),
-    radial-gradient(circle at 21% 74%, rgba(33,54,34,0.04) 0 1.1%, transparent 1.2%),
-    radial-gradient(circle at 20% 65%, rgba(33,54,34,0.04) 0 0.9%, transparent 1%),
-
-    /* topo / radar rings */
-    repeating-radial-gradient(
-      circle at 68% 58%,
+    /* topo planet top right */
+    repeating-linear-gradient(
+      45deg,
       rgba(118,166,123,0.08) 0 2px,
-      transparent 2px 14px
+      transparent 2px 8px
+    ) 82% 16% / 120px 120px no-repeat,
+    radial-gradient(circle at 82% 16%,
+      rgba(167,214,172,0.22) 0 5.2%,
+      rgba(143,201,154,0.10) 5.2% 6.1%,
+      transparent 6.2%
     ),
 
-    /* topo / radar planet fade */
-    radial-gradient(circle at 68% 58%,
-      rgba(167,214,172,0.16) 0 9%,
-      rgba(143,201,154,0.08) 9% 13%,
-      transparent 13.5%
-    );
+    /* small gas giant mid left */
+    repeating-linear-gradient(
+      0deg,
+      rgba(118,166,123,0.08) 0 3px,
+      rgba(255,255,255,0.04) 3px 6px,
+      transparent 6px 10px
+    ) 10% 52% / 95px 95px no-repeat,
+    radial-gradient(circle at 10% 52%,
+      rgba(167,214,172,0.20) 0 3.8%,
+      rgba(143,201,154,0.10) 3.8% 4.5%,
+      transparent 4.6%
+    ),
+
+    /* crater planet middle right */
+    radial-gradient(circle at 76% 42%,
+      rgba(167,214,172,0.20) 0 4.5%,
+      rgba(143,201,154,0.10) 4.5% 5.4%,
+      transparent 5.5%
+    ),
+    radial-gradient(circle at 74.8% 40.8%, rgba(33,54,34,0.045) 0 0.4%, transparent 0.45%),
+    radial-gradient(circle at 77.4% 43.5%, rgba(33,54,34,0.035) 0 0.3%, transparent 0.35%),
+
+    /* topo/radar planet lower left */
+    repeating-linear-gradient(
+      90deg,
+      rgba(118,166,123,0.07) 0 2px,
+      transparent 2px 7px
+    ) 22% 76% / 130px 130px no-repeat,
+    radial-gradient(circle at 22% 76%,
+      rgba(167,214,172,0.22) 0 5.5%,
+      rgba(143,201,154,0.10) 5.5% 6.5%,
+      transparent 6.6%
+    ),
+
+    /* larger soft gas giant lower right */
+    repeating-linear-gradient(
+      0deg,
+      rgba(118,166,123,0.08) 0 5px,
+      rgba(255,255,255,0.04) 5px 10px,
+      transparent 10px 16px
+    ) 78% 80% / 190px 190px no-repeat,
+    radial-gradient(circle at 78% 80%,
+      rgba(167,214,172,0.20) 0 8%,
+      rgba(143,201,154,0.10) 8% 9.2%,
+      transparent 9.3%
+    ),
+
+    /* tiny filler dots */
+    radial-gradient(circle at 58% 28%, rgba(167,214,172,0.18) 0 2.2%, transparent 2.3%),
+    radial-gradient(circle at 61% 64%, rgba(167,214,172,0.16) 0 1.8%, transparent 1.9%),
+    radial-gradient(circle at 33% 60%, rgba(167,214,172,0.17) 0 2%, transparent 2.1%),
+    radial-gradient(circle at 90% 58%, rgba(167,214,172,0.14) 0 1.6%, transparent 1.7%);
 }
 
-/* keeps content above background texture */
+/* keep content above background */
 header,
 nav,
 main,
@@ -167,7 +213,6 @@ a:hover {
   color: #355c38;
 }
 
-/* reusable cards */
 .card,
 .intro-box,
 .section-text {
@@ -188,7 +233,6 @@ a:hover {
   color: #355c38;
 }
 
-/* home page */
 .home-layout {
   display: flex;
   align-items: flex-start;
@@ -234,7 +278,6 @@ a:hover {
   color: #325336;
 }
 
-/* research page intro */
 .intro-quote {
   text-align: center;
   font-style: italic;
@@ -273,7 +316,6 @@ a:hover {
   text-align: left;
 }
 
-/* dust devil layout */
 .dust-devil-layout {
   display: flex;
   align-items: flex-start;
@@ -291,7 +333,6 @@ a:hover {
   text-align: right;
 }
 
-/* shared media styling */
 .media-file {
   width: 100%;
   max-width: 360px;
@@ -302,7 +343,6 @@ a:hover {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* alternating research sections */
 .research-section {
   margin-bottom: 60px;
 }
@@ -351,7 +391,6 @@ a:hover {
   text-align: right;
 }
 
-/* cv page */
 .section {
   margin-top: 45px;
 }
@@ -384,7 +423,6 @@ li {
   margin-bottom: 6px;
 }
 
-/* news page */
 .year-section {
   margin-top: 50px;
 }
@@ -448,7 +486,6 @@ li {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* divider */
 hr {
   border: none;
   height: 1px;
@@ -456,7 +493,6 @@ hr {
   margin: 60px 0;
 }
 
-/* footer */
 footer {
   background: linear-gradient(135deg, #a7d6ac 0%, #8fc99a 100%);
   color: #213622;
@@ -469,7 +505,6 @@ footer {
   box-shadow: 0 -4px 14px rgba(33, 54, 34, 0.05);
 }
 
-/* mobile */
 @media (max-width: 800px) {
   .home-layout,
   .dust-devil-layout,
@@ -532,40 +567,37 @@ footer {
   }
 
   body::after {
-    opacity: 0.24;
+    opacity: 0.28;
     background:
       repeating-linear-gradient(
         0deg,
-        rgba(118,166,123,0.08) 0 4px,
-        rgba(255,255,255,0.04) 4px 8px,
-        transparent 8px 14px
-      ) 82% 12% / 180px 180px no-repeat,
-
-      radial-gradient(circle at 82% 12%,
-        rgba(167,214,172,0.18) 0 11%,
-        rgba(143,201,154,0.10) 11% 15%,
-        transparent 15.5%
+        rgba(118,166,123,0.08) 0 3px,
+        rgba(255,255,255,0.04) 3px 6px,
+        transparent 6px 10px
+      ) 84% 10% / 110px 110px no-repeat,
+      radial-gradient(circle at 84% 10%,
+        rgba(167,214,172,0.18) 0 6.5%,
+        rgba(143,201,154,0.08) 6.5% 7.4%,
+        transparent 7.5%
       ),
 
-      radial-gradient(circle at 12% 78%,
-        rgba(167,214,172,0.16) 0 10%,
-        rgba(143,201,154,0.08) 10% 14%,
-        transparent 14.5%
+      radial-gradient(circle at 14% 82%,
+        rgba(167,214,172,0.16) 0 6%,
+        rgba(143,201,154,0.08) 6% 6.8%,
+        transparent 6.9%
       ),
+      radial-gradient(circle at 12% 80%, rgba(33,54,34,0.04) 0 0.5%, transparent 0.55%),
+      radial-gradient(circle at 16% 84%, rgba(33,54,34,0.03) 0 0.4%, transparent 0.45%),
 
-      radial-gradient(circle at 10% 75%, rgba(33,54,34,0.04) 0 1.2%, transparent 1.3%),
-      radial-gradient(circle at 16% 82%, rgba(33,54,34,0.03) 0 1%, transparent 1.1%),
-
-      repeating-radial-gradient(
-        circle at 76% 72%,
+      repeating-linear-gradient(
+        90deg,
         rgba(118,166,123,0.06) 0 2px,
-        transparent 2px 12px
-      ),
-
-      radial-gradient(circle at 76% 72%,
-        rgba(167,214,172,0.12) 0 9%,
-        rgba(143,201,154,0.06) 9% 13%,
-        transparent 13.5%
+        transparent 2px 6px
+      ) 74% 72% / 100px 100px no-repeat,
+      radial-gradient(circle at 74% 72%,
+        rgba(167,214,172,0.14) 0 5.5%,
+        rgba(143,201,154,0.06) 5.5% 6.3%,
+        transparent 6.4%
       );
   }
 }
