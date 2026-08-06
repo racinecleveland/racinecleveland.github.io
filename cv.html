@@ -3,12 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Curriculum Vitae</title>
+  <meta
+    name="description"
+    content="Curriculum vitae of Dr. Racine D. Cleveland, a remote sensing and planetary scientist specializing in atmospheric science, scientific computing, geospatial analysis, field instrumentation, and science communication."
+  >
+  <title>Curriculum Vitae | Racine D. Cleveland</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-<div class="planet-bg">
+
+<div class="planet-bg" aria-hidden="true">
   <div class="planet crater p1"></div>
   <div class="planet gas moon p2"></div>
   <div class="planet crater moon p3"></div>
@@ -21,217 +26,788 @@
 </div>
 
 <header>
-  <div class="header-planets">
+  <div class="header-planets" aria-hidden="true">
     <div class="h-planet gas ringed medium"></div>
     <div class="h-planet crater moon large"></div>
     <div class="h-planet gas small"></div>
   </div>
-  <h1>Racine D. Cleveland</h1>
-  <p>Planetary Science Postdoctoral Research Fellow</p>
+
+  <h1>Racine D. Cleveland, Ph.D.</h1>
+  <p>Remote Sensing Scientist &amp; Planetary Science Postdoctoral Research Fellow</p>
 </header>
 
-<nav>
+<nav aria-label="Primary navigation">
   <a href="index.html">About Me</a>
   <a href="researchinterests.html">Research Interests</a>
   <a href="scienceoutreach.html">Science Outreach</a>
-  <a href="cv.html">Curriculum Vitae</a>
+  <a href="cv.html" aria-current="page">Curriculum Vitae</a>
 </nav>
 
-<div class="page-wrapper">
+<main class="page-wrapper">
 
-  <p>
-    Dr. Racine D. Cleveland is a planetary scientist, GIS specialist, educator, and science communicator whose work bridges research, teaching, and public outreach. She is currently a Postdoctoral Research Fellow at Boise State University, where she combines atmospheric science, remote sensing, geospatial analysis, and scientific computing to investigate surface-atmosphere interactions on Earth and Mars. Her expertise includes developing Python and GIS workflows, analyzing orbital and rover datasets, conducting field campaigns, and applying geospatial technologies to environmental research. Beyond research, Dr. Cleveland is passionate about helping students discover science through teaching, undergraduate mentoring, and hands-on outreach programs that make astronomy and geospatial science accessible to learners of all backgrounds.
-  </p>
+  <!-- PROFESSIONAL PROFILE -->
+  <section class="section" aria-labelledby="profile-heading">
+    <h2 id="profile-heading">Professional Profile</h2>
 
-  <!-- SKILLS -->
-  <div class="section">
-    <h2>Skills & Certifications</h2>
+    <p>
+      Remote sensing scientist specializing in atmospheric science, planetary science,
+      scientific computing, and geospatial analysis. Develops automated Python and GIS
+      workflows to process large environmental datasets from orbital, rover, UAV, and
+      field-based observations, integrating remote sensing, image analysis, and numerical
+      methods to investigate surface–atmosphere interactions across Earth and planetary
+      environments. Experienced leading interdisciplinary field campaigns, developing
+      scientific software, mentoring student researchers, and communicating complex
+      science through peer-reviewed publications, invited public lectures, media interviews,
+      conference presentations, and community outreach.
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:racinedcleveland@gmail.com">
+        racinedcleveland@gmail.com
+      </a>
+      &nbsp; | &nbsp;
+      <strong>Website:</strong>
+      <a href="https://racinecleveland.com">
+        racinecleveland.com
+      </a>
+    </p>
+  </section>
+
+  <!-- AREAS OF EXPERTISE -->
+  <section class="section" aria-labelledby="expertise-heading">
+    <h2 id="expertise-heading">Areas of Expertise</h2>
 
     <ul>
-      <li>GIS: <a href="https://cas.okstate.edu/geography/certificates/gis_certificate_requirements" target="blank"> GIS Certificate<a/>, ArcGIS, ENVI, SNAP, QGIS, eCognition, BAE Socet Set, Ames Stereo Pipeline, ISIS3, Agisoft Metshape</li>
-      <li>Programming: Python, ArcPy, R, Git/GitHub</li>
-      <li>Field Instrumentation & Sensor Systems: Arduino programming, environmental sensor integration, dust sensor calibration, embedded data logging systems, electronics assembly and soldering, SD/RTC integration, field instrumentation development</li>
-      <li>Other: FAA Part 107 Certified, Conference Moderator (LPSC, Planetary Dune Workshop)</li>
+      <li>Multi-Platform Remote Sensing &amp; Image Analysis</li>
+      <li>Scientific Computing &amp; Workflow Automation</li>
+      <li>Atmospheric &amp; Planetary Science</li>
+      <li>Geospatial Analysis</li>
+      <li>Environmental Field Instrumentation</li>
+      <li>Science Communication &amp; Public Engagement</li>
     </ul>
+  </section>
 
-  </div>
+  <!-- TECHNICAL PROFICIENCIES -->
+  <section class="section" aria-labelledby="technical-heading">
+    <h2 id="technical-heading">Technical Proficiencies</h2>
 
-<!-- WORK EXPERIENCE -->
-  <div class="section">
-    <h2>Work Experience</h2>
+    <ul>
+      <li>
+        <strong>Programming:</strong>
+        Python, ArcPy, R, JupyterLab, scientific workflow automation
+      </li>
+
+      <li>
+        <strong>GIS:</strong>
+        ArcGIS Pro, ArcGIS Online, QGIS, geodatabases, spatial analysis
+      </li>
+
+      <li>
+        <strong>Remote Sensing:</strong>
+        ENVI, SNAP, ISIS3, eCognition, Agisoft Metashape,
+        object-based image analysis (OBIA), change detection
+      </li>
+
+      <li>
+        <strong>Data Science:</strong>
+        NumPy, Pandas, environmental data processing, reproducible workflows
+      </li>
+
+      <li>
+        <strong>Field Instrumentation:</strong>
+        Arduino, environmental sensors, embedded data logging,
+        electronics integration, FAA Part 107
+      </li>
+    </ul>
+  </section>
+
+  <!-- PROFESSIONAL APPOINTMENTS -->
+  <section class="section" aria-labelledby="appointments-heading">
+    <h2 id="appointments-heading">Professional Appointments</h2>
 
     <div class="item">
-      <span class="title">Postdoctoral Research Fellow — Boise State University - Dept. of Physics and Astronomy</span>
-      <span class="date">2026–Present</span>
+      <span class="title">
+        Postdoctoral Research Fellow — Boise State University,
+        Department of Physics and Astronomy
+      </span>
+
+      <span class="date">March 2026–Present</span>
+
       <ul>
-        <li>Mentor undergraduate researchers in atmospheric and planetary science, guiding project development, environmental data analysis, Python-based scientific workflows, and technical writing within a collaborative research environment.</li>
-        <li>Conduct interdisciplinary research on atmospheric boundary-layer processes and convective vortices using remote sensing, field observations, and planetary environmental datasets. Disseminate research through peer-reviewed publications, scientific conferences, and public outreach programs.</li>
-        <li>Design and coordinate terrestrial field campaigns, deploying meteorological instrumentation and environmental sensors to investigate atmospheric variability and dust transport processes.s</li>
-        <li>Planned and led hands-on astronomy and STEM activities and stargazing nights, adapting lessons for a wide range of ages and learning styles.</li>
+        <li>
+          Lead interdisciplinary research investigating atmospheric processes
+          and surface–atmosphere interactions across Earth and Mars.
+        </li>
+
+        <li>
+          Develop scientific software and automated Python workflows for
+          planetary environmental datasets and geospatial analyses.
+        </li>
+
+        <li>
+          Design, coordinate, and execute terrestrial field campaigns,
+          deploying meteorological instrumentation, environmental sensor
+          networks, and aerosol monitoring systems.
+        </li>
+
+        <li>
+          Mentor undergraduate researchers in scientific programming,
+          environmental data analysis, research design, and technical writing.
+        </li>
+
+        <li>
+          Prepare peer-reviewed publications, research proposals,
+          conference presentations, and technical reports.
+        </li>
+
+        <li>
+          Deliver public lectures and astronomy outreach programs while
+          engaging diverse audiences through community science education.
+        </li>
       </ul>
     </div>
 
     <div class="item">
-      <span class="title">GIS Technical Intern — Canadian Valley Electrical Cooperative</span>
-      <span class="date">June 2021-Aug 2021</span>
+      <span class="title">
+        GIS Technical Intern — Canadian Valley Electric Cooperative
+      </span>
+
+      <span class="date">June 2021–August 2021</span>
+
       <ul>
-        <li>Verified, edited, and managed geospatial data to support asset inventory, system maintenance, and long-term infrastructure planning</li>
-        <li>Supported the management of utility assets serving more than 27,000 electric meters across ten central Oklahoma counties</li>
-        <li>Assisted engineers and GIS analysts with maintaining an accurate digital model of the electric distribution network</li>
-      </ul>
-    </div>
-    
-    <div class="item">
-      <span class="title">Teaching Assistant — University of Arkansas</span>
-      <ul>
-        <li>Physical Geology (2024)</li>
-        <li>Geodatabases, Spatial Analysis, GIS Applications (2020)</li>
-        <li>Earth Science Lab (2019)</li>
+        <li>
+          Verified, edited, and managed geospatial data supporting asset
+          inventory, system maintenance, and long-term infrastructure planning.
+        </li>
+
+        <li>
+          Supported management of utility assets serving more than 27,000
+          electric meters across ten central Oklahoma counties.
+        </li>
+
+        <li>
+          Assisted engineers and GIS analysts in maintaining an accurate
+          digital model of the electric distribution network.
+        </li>
       </ul>
     </div>
 
     <div class="item">
-      <span class="title">Class Developer — University of Arkansas</span>
+      <span class="title">
+        Teaching Assistant — University of Arkansas
+      </span>
+
+      <ul>
+        <li>
+          Assisted instruction and laboratory activities for undergraduate
+          courses in Physical Geology, Spatial Analysis, Geodatabases,
+          Geospatial Applications, and Earth Science.
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <span class="title">
+        GIS Curriculum Developer — University of Arkansas
+      </span>
+
       <span class="date">Summer 2020</span>
+
       <ul>
-        <li>Spatial Analysis using ArcGIS</li> 
-        <li>Introduction to Geodatabases</li>
-        <li>Geospatial Applications</li>
+        <li>
+          Developed instructional materials and laboratory exercises for
+          undergraduate GIS courses.
+        </li>
+
+        <li>
+          Courses included Spatial Analysis using ArcGIS, Introduction to
+          Geodatabases, and Geospatial Applications.
+        </li>
       </ul>
     </div>
 
     <div class="item">
-      <span class="title">Student Research Assistant — Unmanned Systems Research Institute</span>
-      <span class="date">October 2018 – July 2019</span>
+      <span class="title">
+        Student Research Assistant — Unmanned Systems Research Institute
+        (now OAIRE)
+      </span>
+
+      <span class="date">October 2018–July 2019</span>
+
       <ul>
-        <li>UAV and satellite image comparison</li>
-        <li>Part 107 flight operations</li>
+        <li>
+          Conducted UAV and satellite image analysis supporting engineering
+          and environmental research projects.
+        </li>
+
+        <li>
+          Collected atmospheric measurements using unmanned aircraft systems
+          under FAA Part 107 certification.
+        </li>
       </ul>
     </div>
 
     <div class="item">
-      <span class="title">GIS Technician — Oklahoma State University</span>
-      <span class="date">May 2018 – May 2019</span>
+      <span class="title">
+        GIS Technician — Oklahoma State University Facilities Management
+      </span>
+
+      <span class="date">May 2018–May 2019</span>
+
       <ul>
-        <li>Converted infrastructure data from AutoCAD to GIS</li>
+        <li>
+          Migrated electrical, utility, water, and parking infrastructure
+          data from AutoCAD into ArcGIS.
+        </li>
+
+        <li>
+          Maintained geospatial datasets using ArcMap, ArcCatalog,
+          and Collector for ArcGIS.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESEARCH EXPERIENCE -->
+  <section class="section" aria-labelledby="research-heading">
+    <h2 id="research-heading">Research Experience</h2>
+
+    <div class="item">
+      <span class="title">
+        Boise State University — Postdoctoral Research Fellow
+      </span>
+
+      <span class="date">NSF Award #2424470</span>
+
+      <ul>
+        <li>
+          Investigate convective vortices (dust devils) using terrestrial
+          field observations and Martian environmental datasets to characterize
+          boundary-layer processes, atmospheric variability, and dust transport.
+        </li>
+
+        <li>
+          Design and deploy meteorological sensor networks, aerosol
+          instrumentation, and automated data-processing workflows to
+          investigate vortex structure and evolution.
+        </li>
+
+        <li>
+          Develop Python-based workflows to analyze atmospheric pressure
+          observations from the Mars 2020 Perseverance MEDA instrument,
+          identifying thousands of convective vortex encounters across more
+          than 1,400 Martian sols.
+        </li>
+
+        <li>
+          Integrate rover observations with terrestrial analog field studies
+          to improve understanding of dust devil formation and atmospheric
+          dynamics on Earth and Mars.
+        </li>
       </ul>
     </div>
 
-  </div>
-        
+    <div class="item">
+      <span class="title">
+        University of Arkansas — Graduate Research Assistant
+      </span>
+
+      <span class="date">NASA MDAP #80NSSC21K1089</span>
+
+      <ul>
+        <li>
+          Developed a semi-automated object-based image analysis workflow to
+          process multi-temporal orbital remote sensing datasets, enabling
+          reproducible detection and quantification of environmental change
+          on Mars.
+        </li>
+
+        <li>
+          Quantified long-term variability of the Martian South Polar Residual
+          Cap by integrating orbital remote sensing, image analysis, and
+          Python-based data processing, resulting in a peer-reviewed methodology
+          published in <em>Remote Sensing</em> (2025).
+        </li>
+
+        <li>
+          Processed and analyzed synthetic aperture radar observations from
+          Titan and terrestrial analog dune fields, applying electromagnetic
+          scattering models to investigate radar interactions with planetary
+          surfaces and subsurfaces.
+        </li>
+
+        <li>
+          Evaluated multiple electromagnetic scattering models to improve
+          interpretation of planetary radar observations by integrating remote
+          sensing measurements with numerical modeling.
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <span class="title">
+        Oklahoma State University — Student Researcher
+      </span>
+
+      <span class="date">
+        Geography Undergraduate Mentorship Program
+      </span>
+
+      <ul>
+        <li>
+          Investigated atmospheric variability during the NSF-funded
+          CLOUD-MAP/LAPSE-RATE field campaign by integrating sUAS observations
+          of temperature and humidity with land-cover and terrain analyses.
+        </li>
+
+        <li>
+          Collaborated with multidisciplinary teams to collect, process,
+          and analyze atmospheric datasets supporting unmanned aircraft
+          systems research for meteorology and severe-weather applications.
+        </li>
+
+        <li>
+          Presented findings at the American Meteorological Society
+          Annual Meeting.
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
-  <div class="section">
-    <h2>Education</h2>
+  <section class="section" aria-labelledby="education-heading">
+    <h2 id="education-heading">Education</h2>
 
     <div class="item">
-      <span class="title">Ph.D., Space and Planetary Science — University of Arkansas</span>
-      <span class="date">Feb 2026</span>
-      <p><em>Of Dunes and Ice: A Surface–Atmosphere Investigation of Mars CO₂ Sublimation Features and Titan Aeolian Fields</em></p>
+      <span class="title">
+        Ph.D., Space and Planetary Science — University of Arkansas
+      </span>
+
+      <span class="date">May 2026</span>
+
+      <p>
+        <em>
+          Of Dunes and Ice: A Surface–Atmosphere Investigation of Mars
+          CO<sub>2</sub> Sublimation Features and Titan Aeolian Fields
+        </em>
+      </p>
     </div>
 
     <div class="item">
-  <span class="title">M.S., Geography — University of Arkansas</span>
-  <span class="date">May 2023</span>
-  <p>
-    <em>
-      <a href="https://scholarworks.uark.edu/etd/5044/" target="_blank">
-        The Terroir of Swiss Cheese: A Temporal and Geomorphological Investigation of the Martian CO₂ Sublimation Pits
-      </a>
-    </em>
-  </p>
-</div>
+      <span class="title">
+        M.S., Geography — University of Arkansas
+      </span>
+
+      <span class="date">May 2023</span>
+
+      <p>
+        <em>
+          <a
+            href="https://scholarworks.uark.edu/etd/5044/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The Terroir of Swiss Cheese: A Temporal and Geomorphological
+            Investigation of the Martian CO<sub>2</sub> Sublimation Pits
+          </a>
+        </em>
+      </p>
+    </div>
 
     <div class="item">
-      <span class="title">B.S., Geography — Oklahoma State University</span>
+      <span class="title">
+        B.S., Geography — Oklahoma State University
+      </span>
+
       <span class="date">May 2019</span>
-      <p><a href="https://cas.okstate.edu/geography/certificates/gis_certificate_requirements" target="blank"> GIS Certificate<a/></p>
+
+      <p>
+        <a
+          href="https://cas.okstate.edu/geography/certificates/gis_certificate_requirements"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Geographic Information Systems Certificate
+        </a>
+      </p>
     </div>
-
-  </div>
-
-  <!-- RESEARCH -->
-  <div class="section">
-    <h2>Funded Research</h2>
-
-    <div class="item">
-      <span class="title">NASA MDAP Research — University of Arkansas</span>
-      <ul>
-        <li>Quantified evolution of Martian South Polar Residual Cap</li>
-        <li>o	To accomplish this objective, we will determined the size of the pits as a function of time for every location where multiple images of pits overlap. We then developed and use an object-based image method to automatically identify and measure attributes of sublimation pits. Then from multiple measurements, we calculated the surface area evolution over time. </li>
-        <li>Published in Remote Sensing (2025)</li>
-        <li>Grant number #80NSSC21K1089</li>
-      </ul>
-    </div>
-
-  </div>
+  </section>
 
   <!-- PUBLICATIONS -->
-  <div class="section">
-    <h2>Publications</h2>
-    <a
-    id="cy-effective-orcid-url"
-    class="underline"
-     href="https://orcid.org/0009-0003-9716-8968"
-     target="orcid.widget"
-     rel="me noopener noreferrer"
-     style="vertical-align: top">
-     <img
-        src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-        style="width: 1em; margin-inline-start: 0.5em"
-        alt="ORCID iD icon"/>
-      https://orcid.org/0009-0003-9716-8968
-    </a>
+  <section class="section" aria-labelledby="publications-heading">
+    <h2 id="publications-heading">Peer-Reviewed Publications</h2>
+
     <p>
-    Cleveland, R. D., Chevrier, V. F., & Tullis, J. A. (2025).
-    <a href="https://www.mdpi.com/2072-4292/17/14/2372" target="_blank">
-    Framework for Mapping Sublimation Features on Mars’ South Polar Cap Using Object-Based Image Analysis
-    </a>
-    <em>Remote Sensing</em>, 17(14), 2372.
+      <a
+        id="cy-effective-orcid-url"
+        class="underline"
+        href="https://orcid.org/0009-0003-9716-8968"
+        target="_blank"
+        rel="me noopener noreferrer"
+      >
+        <img
+          src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+          style="width: 1em; margin-inline-end: 0.35em; vertical-align: middle;"
+          alt="ORCID iD icon"
+        >
+        ORCID: 0009-0003-9716-8968
+      </a>
     </p>
 
-  </div>
+    <p>
+      Cleveland, Racine D., Vincent F. Chevrier, and Jason A. Tullis. 2025.
+      “<a
+        href="https://doi.org/10.3390/rs17142372"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Framework for Mapping Sublimation Features on Mars’ South Polar Cap
+      Using Object-Based Image Analysis</a>.”
+      <em>Remote Sensing</em> 17(14): 2372.
+    </p>
+  </section>
 
-  <!-- PRESENTATIONS -->
-  <div class="section">
-    <h2>Professional Presentations</h2>
+  <!-- PROFESSIONAL PRESENTATIONS -->
+  <section class="section" aria-labelledby="presentations-heading">
+    <h2 id="presentations-heading">Professional Presentations</h2>
 
     <ul>
-      <li>R. D. Cleveland, M. H. Aly (2025) “Radar Insights into Dune Terrain on Titan and in the Namib Desert”, Eighth International Planetary Dune Workshop, Abstract #3017 (Main Presenter)</li>
-      <li>R. D. Cleveland, V. Chevrier, J. A. Tullis (2025) “Exploring the Sublimation Dynamics of Mars’ South Polar Residual Cap”, Eighth International Conference on Mars Polar Science and Exploration, Abstract #6074 (Main Presenter)</li>
-      <li>R. D. Cleveland, V. Chevrier, J. A. Tullis (2025) “Swiss Cheese Feature Dynamics: Remote Sensing Analysis”, LPSC LVI, Abstract #2179 (Main Presenter)</li>
-      <li>R. D. Cleveland, V. Chevrier, J. A. Tullis (2024) “The Making of Swiss Cheese: A Martian Recipe”, LPSC LV, Abstract #2397 (Main Presenter)</li>
-      <li>R. D. Cleveland, V. Chevrier, J. A. Tullis (2023) “An Object-Based Image Analysis of “Swiss Cheese” Terrains’ Evolution on the Martian South Polar Cap”, LPSC LIV, Abstract #2726 (Main Presenter)</li>
-      <li>R. D. Swick, V. Chevrier, J. A. Tullis (2020) “An Object-Based Image Analysis of the Swiss Cheese Terrain Evolution on the Martian South Pole: Preliminary Results”, LPSC LI, Abstract #2628 (Main Presenter)</li>
-      <li>R. D. Swick, A. Frazier, J. Jacob, and V. Natalie (2019) “Impacts of Land Surface Heterogeneity on Thermodynamic Variables Collected from Unmanned Aircraft Systems: Results from the 2018 LAPSE-RATE Field Campaign”. AMS XCIX, Abstract #S147 (Main Presenter)</li>
+      <li>
+        R. Cleveland and M. H. Aly (2025), “Radar Insights into Dune Terrain
+        on Titan and in the Namib Desert,” Eighth International Planetary
+        Dune Workshop, Abstract #3017.
+      </li>
+
+      <li>
+        R. Cleveland, V. Chevrier, and J. A. Tullis (2025),
+        “Exploring the Sublimation Dynamics of Mars’ South Polar Residual Cap,”
+        Eighth International Conference on Mars Polar Science and Exploration,
+        Abstract #6074.
+      </li>
+
+      <li>
+        R. Cleveland, V. Chevrier, and J. A. Tullis (2025),
+        “Swiss Cheese Feature Dynamics: Remote Sensing Analysis,”
+        Lunar and Planetary Science Conference LVI, Abstract #2179.
+      </li>
+
+      <li>
+        R. Cleveland and M. H. Aly (2025),
+        “Across the Dune Divide: A Radar Comparison of Titan and Earth’s
+        Dune Terrain,” Lunar and Planetary Science Conference LVI,
+        Abstract #2209.
+      </li>
+
+      <li>
+        R. Cleveland, V. Chevrier, and J. A. Tullis (2024),
+        “The Making of Swiss Cheese: A Martian Recipe,”
+        Lunar and Planetary Science Conference LV, Abstract #2397.
+      </li>
+
+      <li>
+        R. Cleveland, V. Chevrier, and J. A. Tullis (2023),
+        “An Object-Based Image Analysis of ‘Swiss Cheese’ Terrains’ Evolution
+        on the Martian South Polar Cap,” Lunar and Planetary Science
+        Conference LIV, Abstract #2726.
+      </li>
+
+      <li>
+        R. Swick, V. Chevrier, and J. A. Tullis (2020),
+        “An Object-Based Image Analysis of the Swiss Cheese Terrain Evolution
+        on the Martian South Pole: Preliminary Results,”
+        Lunar and Planetary Science Conference LI, Abstract #2628.
+      </li>
+
+      <li>
+        R. Swick, A. Frazier, J. Jacob, and V. Natalie (2019),
+        “Impacts of Land Surface Heterogeneity on Thermodynamic Variables
+        Collected from Unmanned Aircraft Systems: Results from the 2018
+        LAPSE-RATE Field Campaign,” American Meteorological Society
+        Annual Meeting XCIX, Abstract #S147.
+      </li>
     </ul>
+  </section>
 
-  </div>
+  <!-- SCIENCE COMMUNICATION -->
+  <section class="section" aria-labelledby="outreach-heading">
+    <h2 id="outreach-heading">Science Communication &amp; Public Outreach</h2>
 
-  <!-- FIELD WORK -->
-  <div class="section">
-    <h2>Field Work</h2>
+    <h3>Invited Public Lectures</h3>
 
-    <p>
-      Dust Devils in Action - Alvord Desert (2026)
-    </p>
-    <ul> 
-      <li> I led a field campaign in the Alvord Desert of southeastern Oregon aimed at investigating dust devil pressure signatures and dust loading through the deployment of a compact (~100 m) network of meteorological stations, aerosol sensors, and time-lapse cameras for long-term monitoring.
+    <ul>
+      <li>
+        <strong>Boise State University First Friday Astronomy Lecture Series</strong>
+        (2026) —
+        <em>Surface–Atmosphere Interactions on Mars and Titan</em>
+      </li>
+
+      <li>
+        <strong>Southern Idaho Historical Aviation Association</strong>
+        (2026) —
+        <em>Humanity’s Mission to the Moon</em>
+      </li>
+
+      <li>
+        <strong>Bruneau Dunes Observatory</strong>
+        (2026) —
+        <em>Humanity’s Mission to the Moon</em>
       </li>
     </ul>
 
-    <p>
-      NASA Dragonfly Field Campaign — Namib Sand Sea (2025)
-    </p>
+    <h3>Media Interviews</h3>
+
     <ul>
-      <li>The trip placed Titan and Mars community scientists into a Dragonfly landing site analog environment to study the materials, scales and textures of the unique Namib linear dune landscape where they considered how to translate that experience to Titan. Participants observed the landscape from different locations, helped plan drone flights, with an eye toward what Dragonfly may obtain, and related the results to ground truth. Such a preparatory experience is accessible now and could ultimately lead to the best interpretation and scientific return for the unique data from Dragonfly.</li>
+      <li>
+        <strong>Idaho Matters, Boise State Public Radio</strong>
+        (2026) — Interview discussing NASA’s Artemis II mission,
+        its scientific objectives, and the future of human spaceflight.
+      </li>
+
+      <li>
+        <strong>Idaho Matters, Boise State Public Radio</strong>
+        (2026) — Interview discussing the Artemis II splashdown,
+        mission accomplishments, and next steps toward returning humans
+        to the Moon.
+      </li>
+
+      <li>
+        <strong>KNWA News</strong>
+        (2024) — Television interview discussing the 2024 total solar eclipse
+        and public interest in astronomy.
+      </li>
     </ul>
-  </div>
+
+    <h3>Observatory &amp; Community Astronomy Programs</h3>
+
+    <ul>
+      <li>
+        Astronomy educator with the IDAstro program, promoting astronomy and
+        planetary science through public observing events and informal science
+        education at Bruneau Dunes State Park.
+      </li>
+
+      <li>
+        Regular presenter at Bruneau Dunes Observatory, leading telescope
+        observing sessions, constellation tours, and discussions of astronomy
+        and planetary science for audiences of all ages.
+      </li>
+
+      <li>
+        Camp leader for Astro Adventure Camp through the Central Idaho Dark Sky
+        Reserve STEM Network, providing immersive astronomy and STEM experiences
+        for youth.
+      </li>
+    </ul>
+
+    <h3>K–12 STEM Outreach</h3>
+
+    <ul>
+      <li>
+        Presented classroom lessons on planetary science and orbital mechanics
+        for elementary students in Prague, Oklahoma.
+      </li>
+
+      <li>
+        Served as a planetarium educator with SPACEHOGS, delivering interactive
+        astronomy presentations and immersive planetarium experiences for
+        K–12 audiences.
+      </li>
+    </ul>
+
+    <h3>Media Features</h3>
+
+    <ul>
+      <li>
+        Featured in the University of Arkansas article
+        <em>Namibian Sand Dunes Provide Insight Into Largest Moon of Saturn</em>,
+        highlighting NASA-funded Dragonfly analog research in Namibia.
+      </li>
+
+      <li>
+        Featured in the Choctaw Nation of Oklahoma <em>Biskinik</em>
+        following completion of a Ph.D. in Space and Planetary Science.
+      </li>
+
+      <li>
+        Featured in the <em>Prague Times New Herald</em>
+        for STEM outreach in local elementary schools.
+      </li>
+    </ul>
+  </section>
+
+  <!-- LEADERSHIP AND PROFESSIONAL SERVICE -->
+  <section class="section" aria-labelledby="service-heading">
+    <h2 id="service-heading">Leadership &amp; Professional Service</h2>
+
+    <h3>Proposal Review Panels</h3>
+
+    <ul>
+      <li>
+        Panelist, NASA Science Mission Directorate Proposal Review Panel (2026).
+      </li>
+    </ul>
+
+    <h3>Journal Peer Review</h3>
+
+    <ul>
+      <li>
+        Peer Reviewer, <em>The Planetary Science Journal</em> (2026–Present).
+      </li>
+    </ul>
+
+    <h3>Conference Service</h3>
+
+    <ul>
+      <li>
+        Session Moderator, Lunar and Planetary Science Conference LV (2024).
+      </li>
+
+      <li>
+        Workshop Session Moderator, Eighth International Planetary Dune
+        Workshop (2025).
+      </li>
+    </ul>
+
+    <h3>University Service</h3>
+
+    <div class="item">
+      <span class="title">
+        Center for Space and Planetary Science Representative —
+        Graduate and Professional Student Congress
+      </span>
+
+      <span class="date">2024–2025</span>
+
+      <ul>
+        <li>
+          Represented the Center for Space and Planetary Science within the
+          Graduate and Professional Student Congress.
+        </li>
+
+        <li>
+          Contributed to event planning, budget discussions, and initiatives
+          supporting the graduate student community.
+        </li>
+
+        <li>
+          Served on the Events, Finance, and Facilities committees.
+        </li>
+      </ul>
+    </div>
+
+    <h3>Leadership</h3>
+
+    <div class="item">
+      <span class="title">
+        Treasurer — SPACEHOGS Astronomy Club
+      </span>
+
+      <span class="date">2022–2026</span>
+
+      <ul>
+        <li>
+          Managed organizational budgets, financial records, and expenditures
+          supporting equipment purchases, outreach events, and student programming.
+        </li>
+
+        <li>
+          Assisted with planning astronomy outreach events and educational programming.
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <span class="title">
+        Member — SPACEHOGS Astronomy Club
+      </span>
+
+      <span class="date">2019–2026</span>
+
+      <ul>
+        <li>
+          Delivered mobile planetarium presentations and interactive astronomy
+          demonstrations for K–12 audiences.
+        </li>
+
+        <li>
+          Used Stellarium to conduct virtual night-sky tours and teach celestial
+          navigation, constellations, and planetary science concepts.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FIELD CAMPAIGNS -->
+  <section class="section" aria-labelledby="field-heading">
+    <h2 id="field-heading">Research Field Campaigns</h2>
+
+    <div class="item">
+      <span class="title">
+        Principal Field Coordinator — Dust Devil Research Campaign,
+        Alvord Desert, Oregon
+      </span>
+
+      <span class="date">2026</span>
+
+      <ul>
+        <li>
+          Led the design and deployment of a distributed atmospheric observation
+          network to investigate dust devil pressure signatures, dust loading,
+          and boundary-layer processes.
+        </li>
+
+        <li>
+          Coordinated installation and operation of meteorological stations,
+          aerosol sensors, and time-lapse imaging systems across an approximately
+          100-meter instrument array.
+        </li>
+
+        <li>
+          Collected and managed environmental datasets supporting Earth-analog
+          studies for Martian atmospheric research.
+        </li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <span class="title">
+        NASA Dragonfly Science Team Field Campaign —
+        Namib Sand Sea, Namibia
+      </span>
+
+      <span class="date">2025</span>
+
+      <ul>
+        <li>
+          Participated in a NASA-sponsored campaign investigating the Namib Sand
+          Sea as a terrestrial analog for Titan’s equatorial dune fields.
+        </li>
+
+        <li>
+          Conducted field observations of dune morphology, sediment transport,
+          and landscape-scale processes to improve interpretation of future
+          Dragonfly observations.
+        </li>
+
+        <li>
+          Collaborated with planetary scientists and engineers to evaluate surface
+          characteristics, drone observation strategies, and ground-truth
+          measurements supporting Dragonfly mission planning.
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <footer>
-    Contact: racinecleveland@boisestate.edu        CV last updated June 2026
+    Contact:
+    <a href="mailto:racinedcleveland@gmail.com">
+      racinedcleveland@gmail.com
+    </a>
+    &nbsp; | &nbsp;
+    CV last updated August 2026
   </footer>
 
-</div>
+</main>
 
 </body>
 </html>
